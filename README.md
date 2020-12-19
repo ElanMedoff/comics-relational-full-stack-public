@@ -1,5 +1,17 @@
 # Comics-Relational-Full-Stack
 
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Run the server and client concurrently:
+
+```bash
+npm run dev
+```
+
 A mini-app built for EN.601.315 (Databases, http://www.cs.jhu.edu/~yarowsky/cs415.html).
 
 Overview:
