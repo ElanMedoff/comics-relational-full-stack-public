@@ -22,4 +22,3 @@ Shortcomings:
 1. The order of the search results are left up to SQL. It would be interesting to
    influence the order using data from the user-created lists?
 1. The design is pretty barebones and isn't mobile-responsive.
-1. Variable names could use a little work.
