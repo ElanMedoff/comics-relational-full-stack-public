@@ -1,0 +1,60 @@
+@use "vars";
+
+.wrapper {
+  margin: vars.$spacing-unit--double;
+  padding: vars.$spacing-unit;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: max-content;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+
+  button {
+    background-color: transparent;
+    margin-top: vars.$spacing-unit;
+  }
+}
+
+.listsAddWrapper {
+  display: flex;
+  flex-direction: column;
+
+  .lists {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: vars.$spacing-unit--double;
+
+    .list {
+      border: 1px solid grey;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: vars.$spacing-unit--half;
+    }
+
+    label {
+      margin-left: vars.$spacing-unit;
+    }
+  }
+
+  .addList {
+    border-top: 1px solid vars.$red;
+    padding-top: vars.$spacing-unit--double;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .addListInput {
+      background-color: transparent;
+      padding: 0 vars.$spacing-unit--half;
+      padding-bottom: 0;
+      border-bottom: 1px solid black;
+      width: 200px;
+      font-style: italic;
+      height: 50px;
+    }
+  }
+}

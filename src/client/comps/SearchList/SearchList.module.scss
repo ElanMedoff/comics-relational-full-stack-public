@@ -1,0 +1,7 @@
+@use "vars";
+
+.arrow {
+  margin-left: vars.$spacing-unit--half;
+  display: flex;
+  align-items: center;
+}

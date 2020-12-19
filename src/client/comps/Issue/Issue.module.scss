@@ -1,0 +1,103 @@
+@use "vars";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.imageOthers {
+  display: flex;
+  justify-content: space-around;
+  margin-top: vars.$spacing-unit--double * 2;
+}
+
+.issueImage {
+  width: 300px;
+  height: 450px;
+  border-radius: 5px;
+  border: 5px solid lightgrey;
+  box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.2);
+  margin-right: vars.$spacing-unit--double;
+  box-sizing: content-box;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  max-width: 400px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 500px;
+  padding: vars.$spacing-unit;
+  margin: vars.$spacing-unit;
+
+  h1 {
+    margin-bottom: vars.$spacing-unit;
+    padding-bottom: vars.$spacing-unit--half / 2;
+    border-bottom: 1px solid vars.$red;
+  }
+}
+
+.cardItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: vars.$spacing-unit;
+
+  img {
+    width: 70px;
+    height: 105px;
+    margin-right: vars.$spacing-unit;
+    border: 1px solid vars.$red;
+    padding: 0;
+    border-radius: 5px;
+  }
+
+  .role {
+    font-style: italic;
+    color: grey;
+    font-size: vars.$font-sm;
+    margin-left: vars.$spacing-unit--half;
+  }
+}
+
+.titleCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1000px;
+}
+
+.titleInfo {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: vars.$spacing-unit--half vars.$spacing-unit--double;
+  margin-bottom: vars.$spacing-unit--double;
+
+  h1 {
+    font-size: vars.$font-xlrg;
+    font-style: italic;
+  }
+}
+
+.info {
+  display: flex;
+
+  span {
+    flex: 1 1 0;
+    border-right: 2px solid vars.$red;
+    margin: vars.$spacing-unit--half vars.$spacing-unit;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}

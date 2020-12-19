@@ -1,0 +1,104 @@
+@use "vars";
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+
+  input[type="date"]::-webkit-input-placeholder {
+    visibility: hidden !important;
+  }
+
+  input::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+}
+
+button {
+  border-radius: 1000px;
+  padding: vars.$spacing-unit--half vars.$spacing-unit;
+  border: 1px solid lightgrey;
+  transition: background-color 0.15s, color 0.15s;
+  background-color: white;
+}
+
+button:hover {
+  background-color: vars.$red;
+  opacity: 0.8;
+  border: 1px solid lightgrey;
+  color: white;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+button:active {
+  opacity: 0.9;
+}
+
+.svgArrow {
+  color: vars.$red;
+  opacity: 0.6;
+  transition: opacity 0.1s;
+}
+
+.svgArrow:hover {
+  opacity: 1;
+  transition: opacity 0.1s;
+}
+
+.issueItemArrow {
+  margin-left: vars.$spacing-unit;
+}
+
+@mixin input {
+  background-color: transparent;
+  padding: 0 vars.$spacing-unit--half;
+  padding-bottom: 0;
+  font-style: italic;
+}
+
+.sharedSearch--outer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1000px;
+}
+
+.sharedSearch--nameInput {
+  @include input;
+  border-bottom: 2px solid black;
+  font-size: vars.$font-base;
+  height: 50px;
+  width: 300px;
+}
+
+.sharedSearch--dateInput {
+  @include input;
+  border-bottom: 1px solid black;
+  font-size: vars.$font-sm;
+  height: 30px;
+}
+
+.sharedSearch--radio {
+  font-size: vars.$font-base;
+  font-style: italic;
+  input {
+    margin-right: vars.$spacing-unit--half;
+  }
+}
+
+.sharedSearch--checkbox {
+  font-size: vars.$font-base;
+  font-style: italic;
+  input {
+    margin-right: vars.$spacing-unit--half;
+  }
+}
+
+.sharedSearch--resetButton {
+  font-size: vars.$font-sm;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid grey;
+  margin-left: 5px;
+  max-height: 25px;
+}

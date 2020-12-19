@@ -1,0 +1,96 @@
+@use "vars";
+
+.formContainer {
+  width: 300px;
+  min-width: 300px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  min-height: 400px;
+  margin: vars.$spacing-unit;
+  margin-top: vars.$spacing-unit--double * 2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-size: vars.$font-lrg;
+      margin: vars.$spacing-unit;
+    }
+
+    input {
+      margin: vars.$spacing-unit--half;
+      background: transparent;
+      display: block;
+      width: 50%;
+      border-bottom: vars.$border-unit--half solid black;
+    }
+
+    .passwordContainer {
+      margin: vars.$spacing-unit--half;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      width: 50%;
+
+      .password {
+        margin: 0;
+        width: 100%;
+      }
+
+      .passwordIcon {
+        padding: 1px;
+        position: absolute;
+        top: -3px;
+        right: 0;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: vars.$spacing-unit;
+  border: vars.$border-unit--half solid lightgrey;
+  padding: vars.$spacing-unit--half vars.$spacing-unit--double;
+  height: 50px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  background-color: transparent;
+}
+
+.inputError {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: vars.$text-secondary;
+  width: 101%;
+  top: 399px;
+  opacity: 1;
+  padding: vars.$spacing-unit;
+  font-size: vars.$font-base;
+  background-color: vars.$red;
+  opacity: 0.6;
+  color: black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.inputErrorOpen {
+  height: 150px;
+  transition: height 0.25s ease;
+}
+
+.inputErrorClosed {
+  padding: 0;
+  height: 0px;
+  transition: height 0.25s ease;
+}

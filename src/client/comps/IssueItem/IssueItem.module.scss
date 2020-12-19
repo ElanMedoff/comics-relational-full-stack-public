@@ -1,0 +1,45 @@
+@use "vars";
+
+.outer {
+  padding: vars.$spacing-unit--half;
+}
+
+.wrapper {
+  border: 1px solid lightgrey;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.15s linear;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-style: italic;
+  padding: vars.$spacing-unit--half;
+  padding-left: vars.$spacing-unit;
+  user-select: none;
+  background-color: white;
+  height: 160px;
+
+  &:hover {
+    box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.15s linear;
+  }
+
+  img {
+    width: 75px;
+  }
+
+  input {
+    margin-left: vars.$spacing-unit;
+  }
+}
+
+.name {
+  font-size: vars.$font-lrg;
+  font-weight: bold;
+  margin: vars.$spacing-unit;
+}
+
+.number {
+  font-size: vars.$font-base;
+}

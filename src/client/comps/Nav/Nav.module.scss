@@ -1,0 +1,40 @@
+@use "vars";
+
+.titleNavigationLoginWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: vars.$spacing-unit--half vars.$spacing-unit--double;
+  border-bottom: 1px solid grey;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.titleNavigationWrapper {
+  // border: 1px solid blue;
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-family: "Bangers", cursive;
+  font-size: vars.$font-xlrg;
+}
+
+.navigation {
+  // border: 1px solid green;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    a:hover {
+      color: rgb(187, 46, 31);
+      transition: color 0.1s linear;
+    }
+    // font-weight: bold;
+    // font-style: italic;
+  }
+}
