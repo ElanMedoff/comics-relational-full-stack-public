@@ -42,11 +42,11 @@ const listener = app.listen(8080, () => {
   console.log(`Server running on port ${listener.address().port}`);
 });
 
-try {
-  await db.close();
-  console.log("Closing the database connection");
-} catch (e) {
-  console.log(e.message, "Error closing the database connection");
-}
+// try {
+//   await db.close();
+//   console.log("Closing the database connection");
+// } catch (e) {
+//   console.log(e.message, "Error closing the database connection");
+// }
 
 export { db };
